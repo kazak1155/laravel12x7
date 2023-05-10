@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('welcomeEmail', function (){
+    $emal = 'volynkin.andrey1155@yandex.ru';
+    \Illuminate\Support\Facades\Mail::to($emal)->send(new \App\Mail\Welcome());
+    return response()->json(['status' => 'success']);
+});
