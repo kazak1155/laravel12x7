@@ -1,3 +1,3 @@
 <div>
-    <h1>simple text "welcome"</h1>
+    <h1>Добрый день, {{ $user->name }}, спасибо за регистрацию.</h1>
 </div>
