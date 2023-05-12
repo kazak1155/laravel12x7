@@ -1,4 +1,0 @@
-name - email - password - status
-test - test@mail.com - 1234512345 - user
-test2 - test2@mail.com - 1234512345 - admin
-test3 - test3@mail.com - 1234512345 - user

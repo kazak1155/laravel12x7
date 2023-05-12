@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rules;
+use Telegram\Bot\Laravel\Facades\Telegram;
 
 class RegisteredUserController extends Controller
 {
@@ -50,11 +51,18 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Mail::to($user->email)->send(new Welcome($user));
+
+        Telegram::sendMessage([
+            'chat_id' => env('TELEGRAM_CHANNEL_ID', ''),
+            'parse_mode' => 'html',
+            'text' => 'пользователь с именем:' . $user->name . ' зарегистрировался'
+        ]);
+
         Auth::login($user);
 
         return view('emails.welcome',
-        [
-            'user' => $user
-        ]);
+            [
+                'user' => $user
+            ]);
     }
 }

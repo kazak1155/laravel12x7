@@ -12,7 +12,7 @@ class Welcome extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public User $user;
+    public  $user;
 
     /**
      * Create a new message instance.
