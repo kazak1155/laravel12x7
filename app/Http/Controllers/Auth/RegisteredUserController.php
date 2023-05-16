@@ -50,13 +50,13 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        Mail::to($user->email)->send(new Welcome($user));
-
-        Telegram::sendMessage([
-            'chat_id' => env('TELEGRAM_CHANNEL_ID', ''),
-            'parse_mode' => 'html',
-            'text' => 'пользователь с именем:' . $user->name . ' зарегистрировался'
-        ]);
+//        Mail::to($user->email)->send(new Welcome($user));
+//
+//        Telegram::sendMessage([
+//            'chat_id' => env('TELEGRAM_CHANNEL_ID', ''),
+//            'parse_mode' => 'html',
+//            'text' => 'пользователь с именем:' . $user->name . ' зарегистрировался'
+//        ]);
 
         Auth::login($user);
 
