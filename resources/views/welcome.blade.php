@@ -38,7 +38,7 @@
                     </svg>
                 </div>
                 <div class="flex justify-center">
-                    12.7 Практическая работа
+                    13.6 Практическая работа
                 </div>
 
                 <div class="mt-16">
