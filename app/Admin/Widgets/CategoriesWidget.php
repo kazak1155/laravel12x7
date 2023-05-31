@@ -18,7 +18,7 @@ class CategoriesWidget  extends AbstractWidget
             'text' => "кол-во категорий:  {$count}",
             'button' => [
                 'text' => 'перейти к списку категорий',
-                'link' => ''
+                'link' => 'http://127.0.0.1:8000/admin/categories'
             ],
             'image' => 'storage/category.jpg'
         ]));

@@ -19,7 +19,7 @@ class ProductsWidget extends AbstractWidget
             'text' => "кол-во пролуктов:  {$count}",
             'button' => [
                 'text' => 'перейти к списку продуктов',
-                'link' => ''
+                'link' => 'http://127.0.0.1:8000/admin/products'
             ],
             'image' => 'storage/product.png'
         ]));
