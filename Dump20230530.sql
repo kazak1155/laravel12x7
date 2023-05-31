@@ -564,3 +564,4 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2023-05-30 14:55:53
+>>>>>>> origin/14.6_Практическая_работа
